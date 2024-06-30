@@ -1,7 +1,7 @@
 package com.example.DevProjectSpringBootJava.controller;
 
 
-import com.example.DevProjectSpringBootJava.Service.RoleService;
+import com.example.DevProjectSpringBootJava.service.RoleService;
 import com.example.DevProjectSpringBootJava.dto.request.RoleRequest;
 import com.example.DevProjectSpringBootJava.dto.response.ApiResponse;
 import com.example.DevProjectSpringBootJava.dto.response.RoleResponse;

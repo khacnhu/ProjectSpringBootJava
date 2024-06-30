@@ -26,13 +26,12 @@ import javax.crypto.spec.SecretKeySpec;
 @EnableMethodSecurity
 public class SecurityConfig {
 
-    public final String[] PUBLIC_ENDPOINTS = {"/users", "/auth/login", "/auth/intro", "/auth/logout"};
+    public final String[] PUBLIC_ENDPOINTS = {
+            "/users", "/auth/login", "/auth/intro", "/auth/logout", "auth/refreshToken"
+    };
 
     @Autowired
     private CustomJwtDecoder customJwtDecoder;
-
-//    @Value("${jwt.signerKey}")
-//    private String signKey;
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {

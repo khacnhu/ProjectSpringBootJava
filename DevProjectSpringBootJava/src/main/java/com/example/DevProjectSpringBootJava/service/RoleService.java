@@ -1,4 +1,4 @@
-package com.example.DevProjectSpringBootJava.Service;
+package com.example.DevProjectSpringBootJava.service;
 
 
 import com.example.DevProjectSpringBootJava.dto.request.RoleRequest;

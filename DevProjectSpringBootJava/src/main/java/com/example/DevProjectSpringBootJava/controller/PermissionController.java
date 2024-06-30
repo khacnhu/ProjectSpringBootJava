@@ -1,12 +1,11 @@
 package com.example.DevProjectSpringBootJava.controller;
 
 
-import com.example.DevProjectSpringBootJava.Service.PermissionService;
+import com.example.DevProjectSpringBootJava.service.PermissionService;
 import com.example.DevProjectSpringBootJava.dto.request.PermissionRequest;
 import com.example.DevProjectSpringBootJava.dto.response.ApiResponse;
 import com.example.DevProjectSpringBootJava.dto.response.PermissionResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

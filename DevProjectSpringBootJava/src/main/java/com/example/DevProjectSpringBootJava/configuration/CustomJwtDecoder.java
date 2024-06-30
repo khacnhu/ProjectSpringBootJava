@@ -1,6 +1,7 @@
 package com.example.DevProjectSpringBootJava.configuration;
 
-import com.example.DevProjectSpringBootJava.Service.AuthenticationService;
+import com.example.DevProjectSpringBootJava.dto.response.IntrospectResponse;
+import com.example.DevProjectSpringBootJava.service.AuthenticationService;
 import com.example.DevProjectSpringBootJava.dto.request.IntrospectRequest;
 import com.nimbusds.jose.JOSEException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,12 +32,13 @@ public class CustomJwtDecoder implements JwtDecoder {
     public Jwt decode(String token) throws JwtException {
         System.out.println("check chay vo decode custom ko");
         try {
-            IntrospectRequest introspectRequest = new IntrospectRequest();
+           IntrospectRequest introspectRequest = new IntrospectRequest();
             introspectRequest.setAccessToken(token);
 
-            var response = authenticationService.introspect(introspectRequest);
 
-            System.out.println("check response intro " + response);
+            IntrospectResponse response = authenticationService.introspect(introspectRequest);
+
+            System.out.println("check response intro " + response.isValid());
 
             if (!response.isValid())
                 throw new JwtException("Token invalid");

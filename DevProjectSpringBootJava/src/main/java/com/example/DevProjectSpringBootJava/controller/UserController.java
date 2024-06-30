@@ -1,12 +1,11 @@
 package com.example.DevProjectSpringBootJava.controller;
 
 
-import com.example.DevProjectSpringBootJava.Service.UserService;
+import com.example.DevProjectSpringBootJava.service.UserService;
 import com.example.DevProjectSpringBootJava.dto.request.UserCreationRequest;
 import com.example.DevProjectSpringBootJava.dto.request.UserUpdatedRequest;
 import com.example.DevProjectSpringBootJava.dto.response.ApiResponse;
 import com.example.DevProjectSpringBootJava.dto.response.UserResponse;
-import com.example.DevProjectSpringBootJava.entity.User;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

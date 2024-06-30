@@ -1,8 +1,7 @@
-package com.example.DevProjectSpringBootJava.Service;
+package com.example.DevProjectSpringBootJava.service;
 
 import com.example.DevProjectSpringBootJava.dto.request.UserCreationRequest;
 import com.example.DevProjectSpringBootJava.dto.request.UserUpdatedRequest;
-import com.example.DevProjectSpringBootJava.dto.response.RoleResponse;
 import com.example.DevProjectSpringBootJava.dto.response.UserResponse;
 import com.example.DevProjectSpringBootJava.entity.User;
 import com.example.DevProjectSpringBootJava.enums.Role;
@@ -11,20 +10,15 @@ import com.example.DevProjectSpringBootJava.exception.ErrorCode;
 import com.example.DevProjectSpringBootJava.mapper.toMapperUser;
 import com.example.DevProjectSpringBootJava.repository.RoleRepository;
 import com.example.DevProjectSpringBootJava.repository.UserRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class UserService {

@@ -9,6 +9,6 @@ import lombok.Setter;
 @Setter
 @Builder
 public class IntrospectResponse {
-    boolean valid;
+    private boolean valid;
 
 }
