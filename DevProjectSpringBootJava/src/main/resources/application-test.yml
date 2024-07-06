@@ -1,0 +1,7 @@
+server:
+  port: 8082
+
+jwt:
+  signerKey: "testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttest"
+  valid-duration: 120 # second
+  refreshable-duration: 1200 #second

@@ -4,16 +4,17 @@ server:
     context-path: /identity
 
 spring:
+  profiles:
+    active: prod
   datasource:
-    url: jdbc:mysql://localhost:3306/identity_service
-    username: root
-    password: Trankhacnhu132!
+    url: ${DBMS_CONNECTION:jdbc:mysql://localhost:3306/identity_service}
+    username: ${DBMS_USERNAME:root}
+    password: ${$DBMS_PASSWORD:Trankhacnhu132!}
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
 
 jwt:
-  signerKey: "maibennhaubanheksdalsslslsdididsllslslsisialaalsialslaslaslasasalsslasls"
   valid-duration: 10 # second
   refreshable-duration: 120 #second

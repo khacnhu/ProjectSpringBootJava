@@ -1,0 +1,7 @@
+server:
+  port: 8081
+
+jwt:
+  signerKey: "prodprodprodprodprodprodprodprodprodprodprodprodprodprodprodprod"
+  valid-duration: 720 # second
+  refreshable-duration: 3600 #second
